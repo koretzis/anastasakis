@@ -1,0 +1,29 @@
+baseURL: "https://anastasakis.netlify.com/"
+languageCode: "en-us"
+title: "Stelios Anastasakis"
+theme: "hugo-theme-nightfall"
+
+params:
+  customCSS: ["css/custom.css"]
+  
+menu:
+  main:
+    - name: About
+      url: /about/
+      weight: 10
+    - name: Publications
+      url: /publications/
+      weight: 20
+    - name: Contact
+      url: /contact/
+      weight: 30
+
+socials:
+  list:
+    - name: GitHub
+      url: "https://github.com/koretzis"
+      icon: "fab fa-github"
+
+module:
+  imports:
+  - path: github.com/lordmathis/hugo-theme-nightfall
