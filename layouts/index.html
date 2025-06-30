@@ -1,0 +1,41 @@
+<!-- layouts/index.html -->
+{{ define "main" }}
+
+<div class="container">
+
+  <!-- 1. Simple, Professional Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      {{- range .Site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+
+  <!-- 2. Main "Expressive" Content Section -->
+  <main class="intro">
+    <div class="intro-content">
+      <!-- Your Name -->
+      <h1 class="intro-title">{{ .Site.Title }}</h1>
+      
+      <!-- Your Expressive Tagline -->
+      <p class="intro-subtitle">
+        Computational neuroscientist and software engineer exploring the frontiers of memory, data, and the code that connects them.
+      </p>
+
+      <!-- 3. Elegant Social Links with Icons -->
+      <ul class="social-links">
+        {{- range .Site.Params.socials.list }}
+        <li>
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+            <i class="{{ .icon }}"></i>
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </main>
+
+</div>
+
+{{ end }}

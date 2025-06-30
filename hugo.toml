@@ -1,0 +1,37 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Stylianos (Stelios) Anastasakis' # This will be your main H1 title
+theme = 'hugo-theme-nightfall'
+
+# --- Menu for your Navbar ---
+[menu]
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about" # This will link to content/about.md
+    weight = 10
+  [[menu.main]]
+    name = "CV"
+    url = "/cv.pdf" # Make sure cv.pdf is in your static/ folder
+    weight = 20
+  # You can add a link to a future blog/posts page here if you want
+  # [[menu.main]]
+  #   name = "Blog"
+  #   pageRef = "/posts"
+  #   weight = 30
+
+
+# --- Social links for the icons on your homepage ---
+[params]
+  [params.socials]
+    [[params.socials.list]]
+      name = "LinkedIn"
+      url = "https://linkedin.com/in/stelios-anastasakis"
+      icon = "fab fa-linkedin" # Font Awesome icon class
+    [[params.socials.list]]
+      name = "GitHub"
+      url = "https://github.com/koretzis" # Use your GitHub username
+      icon = "fab fa-github"
+    [[params.socials.list]]
+      name = "Email"
+      url = "mailto:anastas.stelios@gmail.com"
+      icon = "fas fa-envelope"
