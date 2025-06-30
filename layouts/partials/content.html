@@ -1,5 +1,5 @@
 <!-- layouts/partials/content.html -->
-<!-- This file overrides the theme's content logic. -->
+<!-- FINAL, CORRECTED VERSION -->
 
 {{- if .IsHome -}}
 
@@ -37,13 +37,13 @@
 
 {{- else -}}
 
-    <!-- ELSE (for all other pages like "About"), use the theme's original logic -->
+    <!-- ELSE (for all other pages like "About"), use the theme's original logic with CORRECTED filenames -->
     <article>
-        {{- partial "page-header.html" . -}}
+        {{- partial "page_header.html" . -}}
         <div class="page-content">
             {{- .Content -}}
         </div>
-        {{- partial "page-footer.html" . -}}
+        {{- partial "page_footer.html" . -}}
     </article>
 
 {{- end -}}
