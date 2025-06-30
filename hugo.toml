@@ -5,13 +5,17 @@ theme = 'hugo-theme-nightfall'
 
 [menu]
   [[menu.main]]
+    name = "Home"
+    pageRef = "/"  # This now correctly points to content/about.md
+    weight = 10
+  [[menu.main]]
     name = "About"
     pageRef = "/about"  # This now correctly points to content/about.md
-    weight = 10
+    weight = 20
   [[menu.main]]
     name = "CV"
     url = "/cv.pdf"
-    weight = 20
+    weight = 30
 
 [params]
   [params.socials]
