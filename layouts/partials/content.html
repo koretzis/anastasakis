@@ -1,18 +1,33 @@
 <!-- layouts/partials/content.html -->
-<!-- FINAL, CORRECTED VERSION -->
+<!-- FINAL VERSION - WITH PHOTO LAYOUT -->
 
 {{- if .IsHome -}}
 
-    <!-- IF this is the homepage, render our custom content INSTEAD of the post list -->
+    <!-- This is the content for your homepage. -->
     <div class="container-narrow">
-        <div class="intro-section">
-            <div class="intro-content">
-                <h1 class="intro-title">{{ .Site.Title }}</h1>
-                <p class="intro-subtitle">
-                    Computational researcher and PhD student exploring the frontiers of learning, memory, and the code that connects them.
-                </p>
+
+        <!-- Main Hero Section with Photo -->
+        <div class="hero-section">
+            
+            <!-- This is the container for the photo and text -->
+            <div class="hero-content">
+
+                <!-- The Profile Photo -->
+                <div class="hero-image">
+                    <img src="/profile.jpg" alt="A photo of Stelios Anastasakis" />
+                </div>
+
+                <!-- The Text Content -->
+                <div class="hero-text">
+                    <h1 class="hero-title">{{ .Site.Title }}</h1>
+                    <p class="hero-subtitle">
+                        Computational researcher and PhD student exploring the frontiers of learning, memory, and the code that connects them.
+                    </p>
+                </div>
             </div>
         </div>
+
+        <!-- The Links Section (Navbar and Socials) -->
         <div class="links-section">
             <nav class="navbar">
                 <ul class="nav-links">
@@ -37,7 +52,7 @@
 
 {{- else -}}
 
-    <!-- ELSE (for all other pages like "About"), use the theme's original logic with CORRECTED filenames -->
+    <!-- This is the logic for all other pages (like "About") -->
     <article>
         {{- partial "page_header.html" . -}}
         <div class="page-content">

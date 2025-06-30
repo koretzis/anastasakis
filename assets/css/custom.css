@@ -110,3 +110,72 @@
     font-size: 1.1rem;
   }
 }
+
+/* ---------------------------------- */
+/* --- NEW HERO SECTION STYLING --- */
+/* ---------------------------------- */
+
+/* Main Hero Section (the whole block) */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 45vh; /* Pushes links down and centers content vertically */
+}
+
+/* The container for the image and text */
+.hero-content {
+  display: flex;
+  align-items: center; /* Vertically aligns the photo and text */
+  justify-content: center;
+  gap: 2.5rem; /* Space between photo and text */
+  flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+/* The circular photo */
+.hero-image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Prevents image from stretching */
+  border: 4px solid var(--accent-color); /* A subtle colored border */
+}
+
+/* The text next to the photo */
+.hero-text {
+  text-align: left; /* Aligns text to the left for a classic look */
+  max-width: 450px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0; /* Removes default margins */
+  color: var(--primary-text-color);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------------------------- */
+/* --- RESPONSIVE MOBILE DESIGN --- */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stack photo on top of text */
+    gap: 1.5rem;
+  }
+  
+  .hero-text {
+    text-align: center; /* Center the text when it's below the photo */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
