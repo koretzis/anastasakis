@@ -1,311 +1,156 @@
-/* assets/css/custom.css */
-/* Add these styles to the end of the file */
+/* ==========================================================================
+   Refactored Custom Stylesheet for Stelios Anastasakis' Website
+   ========================================================================== */
 
 /* ---------------------------------- */
-/* --- CUSTOM HOMEPAGE STYLING --- */
+/* 1. GLOBAL RESETS & DEFAULTS
 /* ---------------------------------- */
+/* This section removes the default styles from links and lists site-wide. */
 
-/* A new container to keep content centered and not too wide */
+a {
+    color: inherit; /* Links will inherit the color of their parent text */
+    text-decoration: none; /* Removes the underline from all links */
+}
+
+ul {
+    list-style: none; /* Removes bullet points from all lists */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------------------------------- */
+/* 2. SITE-WIDE STRUCTURE & HEADER
+/* ---------------------------------- */
+/* Styles for elements that appear on every page, like the main header. */
+
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    margin-bottom: 2.5rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1.75rem;
+}
+
+/* We specifically add back hover effects to the main navigation links. */
+.main-nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Placeholder for hover effect */
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* Ensures the footer doesn't ride up on short pages. */
+.main-content {
+    min-height: 70vh;
+}
+
+
+/* ---------------------------------- */
+/* 3. HOMEPAGE-SPECIFIC STYLES
+/* ---------------------------------- */
+/* Styles for the unique layout of the homepage hero section. */
+
 .container-narrow {
-  max-width: 45rem; /* Adjust as needed */
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
 }
 
-/* --- Main Intro Section --- */
-.intro-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: 40vh; /* Pushes the links down the page */
-}
-
-.intro-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--primary-text-color);
-  line-height: 1.2;
-}
-
-.intro-subtitle {
-  font-size: 1.2rem;
-  color: var(--secondary-text-color);
-  line-height: 1.6;
-  max-width: 35em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- Links Section --- */
-.links-section {
-  border-top: 1px solid var(--border-color);
-  padding-top: 2rem;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between; /* This puts nav on left, social on right */
-  align-items: center;
-  flex-wrap: wrap; /* Allows items to stack on small screens */
-  gap: 1.5rem;
-}
-
-/* --- Navigation Links (About, CV) --- */
-.navbar .nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar .nav-links a {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-.navbar .nav-links a:hover {
-  color: var(--accent-color);
-}
-
-
-/* --- Social Links (LinkedIn, GitHub) --- */
-.social-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1.75rem;
-}
-
-.social-links a {
-  color: var(--secondary-text-color);
-  font-size: 1.4rem;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  display: inline-block;
-}
-
-.social-links a:hover {
-  transform: translateY(-3px);
-  color: var(--accent-color);
-}
-
-/* --- Responsive Design for small screens --- */
-@media (max-width: 600px) {
-  .links-section {
-    flex-direction: column; /* Stack nav and social links */
+.hero-section {
+    display: flex;
     justify-content: center;
-    gap: 2rem;
-  }
-
-  .intro-title {
-    font-size: 2rem;
-  }
-
-  .intro-subtitle {
-    font-size: 1.1rem;
-  }
-}
-
-/* ---------------------------------- */
-/* --- NEW HERO SECTION STYLING --- */
-/* ---------------------------------- */
-
-/* Main Hero Section (the whole block) */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 45vh; /* Pushes links down and centers content vertically */
-}
-
-/* The container for the image and text */
-.hero-content {
-  display: flex;
-  align-items: center; /* Vertically aligns the photo and text */
-  justify-content: center;
-  gap: 2.5rem; /* Space between photo and text */
-  flex-wrap: wrap; /* Allows stacking on small screens */
-}
-
-/* The circular photo */
-.hero-image img {
-  width: 100%; 
-  height: 100%;
-  object-fit: cover; /* Prevents stretching */
-  object-position: top; /* Adjust crop focus */
-  display: block; /* Removes extra space */
-}
-
-/* The text next to the photo */
-.hero-text {
-  text-align: left; /* Aligns text to the left for a classic look */
-  max-width: 450px;
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0; /* Removes default margins */
-  color: var(--primary-text-color);
-  line-height: 1.2;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: var(--secondary-text-color);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* ---------------------------------- */
-/* --- RESPONSIVE MOBILE DESIGN --- */
-/* ---------------------------------- */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column; /* Stack photo on top of text */
-    gap: 1.5rem;
-  }
-  
-  .hero-text {
-    text-align: center; /* Center the text when it's below the photo */
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-}
-
-/* Custom homepage styles */
-.container-narrow {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.hero-section {
-    margin-bottom: 2rem;
+    align-items: center;
+    min-height: 45vh;
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-}
-
-@media (min-width: 768px) {
-    .hero-content {
-        flex-direction: row;
-        align-items: flex-start;
-    }
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .hero-image {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
+    border-radius: 50%; /* Makes the container a circle */
+    overflow: hidden; /* Crucial for making the image conform to the circle */
+    flex-shrink: 0; /* Prevents the image from shrinking */
 }
 
 .hero-image img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    object-position: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
 }
 
 .hero-text {
-    text-align: center;
+    max-width: 450px;
+    text-align: left;
 }
 
-@media (min-width: 768px) {
-    .hero-text {
-        text-align: left;
-    }
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-text-color);
+    line-height: 1.2;
 }
 
-.links-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+    margin: 0;
 }
+
 
 /* ---------------------------------- */
-/* --- SITE-WIDE HEADER STYLING --- */
+/* 4. RESPONSIVE DESIGN (MOBILE)
 /* ---------------------------------- */
+/* A single, consolidated section for how the site adapts to small screens. */
 
-.site-header {
-  border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0;
-  margin-bottom: 2.5rem;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between; /* Pushes title to left, nav to right */
-  align-items: center;
-}
-
-/* Your name/title link */
-.site-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--primary-text-color);
-  text-decoration: none; /* Removes underline */
-}
-
-/* Navigation list styling */
-.main-nav ul {
-  list-style: none; /* Removes bullet points */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.75rem; /* Space between links */
-}
-
-/* Individual navigation links */
-.main-nav a {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--secondary-text-color);
-  text-decoration: none; /* Removes underline */
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent; /* Placeholder for hover effect */
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.main-nav a:hover {
-  color: var(--accent-color);
-  border-bottom-color: var(--accent-color); /* Underline appears on hover */
-}
-
-/* The main content area below the header */
-.main-content {
-  min-height: 70vh; /* Ensures footer doesn't ride up on short pages */
-}
-
-
-/* --- Responsive Mobile Design --- */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
+    /* Header stacks vertically on mobile */
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-a {
-    all: unset;
-}
+    /* Hero section stacks vertically on mobile */
+    .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
 
-ul
-{
-    list-style: none;
-    list-style-type: none;
+    .hero-title {
+        font-size: 2rem;
+    }
 }
