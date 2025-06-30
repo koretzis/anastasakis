@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default `en` }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    
+    <!-- Include your CSS -->
+    {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    {{ $custom := resources.Get "css/custom.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $custom.Permalink }}">
+</head>
+<body>
+    <div class="container-narrow">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="{{ `images/profile.jpg` | absURL }}" alt="Professional photo of Stelios Anastasakis">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">{{ .Site.Title }}</h1>
+                    <p class="hero-subtitle">
+                        Computational researcher and PhD student exploring the frontiers of learning, memory, and the code that connects them.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="links-section">
+            <nav class="navbar">
+                <ul class="nav-links">
+                    {{ range .Site.Menus.main }}
+                        {{ if ne .Name "Home" }}
+                            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </nav>
+            <ul class="social-links">
+                {{ range .Site.Params.socials.list }}
+                <li>
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+                        <i class="{{ .icon }}"></i>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
