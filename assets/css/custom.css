@@ -299,3 +299,13 @@
     gap: 1rem;
   }
 }
+
+a {
+    all: unset;
+}
+
+ul
+{
+    list-style: none;
+    list-style-type: none;
+}
