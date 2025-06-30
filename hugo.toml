@@ -6,7 +6,7 @@ theme = 'hugo-theme-nightfall'
 [menu]
   [[menu.main]]
     name = "Home"
-    pageRef = "/"  # This now correctly points to content/about.md
+    pageRef = "/" 
     weight = 10
   [[menu.main]]
     name = "About"
