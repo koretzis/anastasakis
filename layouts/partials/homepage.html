@@ -13,6 +13,23 @@
         </div>
     </div>
     <div class="links-section">
-        <!-- Your navigation and social links here -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                {{- range .Site.Menus.main }}
+                    {{- if ne .Name "Home" }}
+                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{- end }}
+                {{- end }}
+            </ul>
+        </nav>
+        <ul class="social-links">
+            {{- range .Site.Params.socials.list }}
+            <li>
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+                    <i class="{{ .icon }}"></i>
+                </a>
+            </li>
+            {{- end }}
+        </ul>
     </div>
 </div>
