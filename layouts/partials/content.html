@@ -9,7 +9,7 @@
             <div class="hero-image">
                 <!-- FIXED: Use Hugo static file reference -->
                 {{ with resources.Get "images/profile.jpg" }}
-                    <img src="{{ .RelPermalink }}" alt="Professional photo of Stelios Anastasakis">
+                    <img src="{{ `images/profile.jpg` | absURL }}" alt="Profile Photo">
                 {{ else }}
                     <!-- Error fallback for debugging -->
                     <div style="border: 2px dashed red; padding: 20px;">

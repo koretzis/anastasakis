@@ -1,3 +1,5 @@
+
+
 /* assets/css/custom.css */
 /* Add these styles to the end of the file */
 
@@ -133,12 +135,16 @@
 }
 
 /* The circular photo */
+.hero-image {
+    overflow: visible !important;
+}
+
 .hero-image img {
-  width: 100%; 
-  height: 100%;
-  object-fit: cover; /* Prevents stretching */
-  object-position: top; /* Adjust crop focus */
-  display: block; /* Removes extra space */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
 }
 
 /* The text next to the photo */
