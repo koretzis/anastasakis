@@ -1,7 +1,7 @@
 # Netlify Build Configuration
 [build]
   publish = "public"
-  command = "hugo --gc --minify"
+  command = "git config core.quotepath false && hugo --gc --minify"
 
 [build.environment]
   HUGO_VERSION = " 0.147.9"
