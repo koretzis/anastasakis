@@ -1,23 +1,15 @@
 <!-- layouts/partials/content.html -->
-<!-- FINAL VERSION - WITH PHOTO LAYOUT -->
+<!-- This is the definitive override that fixes the theme. -->
 
 {{- if .IsHome -}}
 
-    <!-- This is the content for your homepage. -->
+    <!-- IF THIS IS THE HOMEPAGE: Render our custom layout with photo and links. -->
     <div class="container-narrow">
-
-        <!-- Main Hero Section with Photo -->
         <div class="hero-section">
-            
-            <!-- This is the container for the photo and text -->
             <div class="hero-content">
-
-                <!-- The Profile Photo -->
                 <div class="hero-image">
-                    <img src="/profile.jpg" alt="A photo of Stelios Anastasakis" />
+                    <img src="/profile.jpg" alt="A professional photo of Stelios Anastasakis" />
                 </div>
-
-                <!-- The Text Content -->
                 <div class="hero-text">
                     <h1 class="hero-title">{{ .Site.Title }}</h1>
                     <p class="hero-subtitle">
@@ -26,8 +18,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- The Links Section (Navbar and Socials) -->
         <div class="links-section">
             <nav class="navbar">
                 <ul class="nav-links">
@@ -52,7 +42,7 @@
 
 {{- else -}}
 
-    <!-- This is the logic for all other pages (like "About") -->
+    <!-- ELSE (for all other pages like "About"): Use the theme's original logic. -->
     <article>
         {{- partial "page_header.html" . -}}
         <div class="page-content">
