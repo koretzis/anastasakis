@@ -6,16 +6,20 @@ theme = 'hugo-theme-nightfall'
 [menu]
   [[menu.main]]
     name = "Home"
-    pageRef = "/" 
+    pageRef = "/"
     weight = 10
   [[menu.main]]
     name = "About"
-    pageRef = "/about"  # This now correctly points to content/about.md
+    pageRef = "/about"
     weight = 20
   [[menu.main]]
-    name = "CV"
-    url = "/cv.pdf"
+    name = "Publications"
+    pageRef = "/publications" # This will link to content/publications.md
     weight = 30
+  [[menu.main]]
+    name = "CV"
+    url = "/cv.pdf" # This links to your PDF in the static/ folder
+    weight = 40
 
 [params]
   [params.socials]

@@ -214,8 +214,8 @@
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     object-position: top;
 }
@@ -235,4 +235,67 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+}
+
+/* ---------------------------------- */
+/* --- SITE-WIDE HEADER STYLING --- */
+/* ---------------------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  margin-bottom: 2.5rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Pushes title to left, nav to right */
+  align-items: center;
+}
+
+/* Your name/title link */
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  text-decoration: none; /* Removes underline */
+}
+
+/* Navigation list styling */
+.main-nav ul {
+  list-style: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.75rem; /* Space between links */
+}
+
+/* Individual navigation links */
+.main-nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  text-decoration: none; /* Removes underline */
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent; /* Placeholder for hover effect */
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color); /* Underline appears on hover */
+}
+
+/* The main content area below the header */
+.main-content {
+  min-height: 70vh; /* Ensures footer doesn't ride up on short pages */
+}
+
+
+/* --- Responsive Mobile Design --- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

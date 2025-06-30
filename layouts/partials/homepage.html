@@ -7,21 +7,13 @@
             <div class="hero-text">
                 <h1 class="hero-title">{{ .Site.Title }}</h1>
                 <p class="hero-subtitle">
-                    Computational researcher and PhD student exploring the frontiers of learning, memory, and the code that connects them.
+                    Computational researcher and MSc student exploring the frontiers of learning, memory, and the code that connects them.
                 </p>
             </div>
         </div>
     </div>
     <div class="links-section">
-        <nav class="navbar">
-            <ul class="nav-links">
-                {{- range .Site.Menus.main }}
-                    {{- if ne .Name "Home" }}
-                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-                    {{- end }}
-                {{- end }}
-            </ul>
-        </nav>
+        
         <ul class="social-links">
             {{- range .Site.Params.socials.list }}
             <li>

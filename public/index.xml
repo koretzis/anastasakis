@@ -15,5 +15,12 @@
       <guid>//localhost:1313/about/</guid>
       <description>&lt;p&gt;My career is a synthesis of two distinct but deeply connected fields: professional software engineering and academic computational neuroscience. My work is driven by a foundational curiosity to understand how the brain&amp;rsquo;s biological hardware gives rise to the software of the mind—specifically, how we learn and remember.&lt;/p&gt;&#xA;&lt;p&gt;My academic journey began with a Diplom in Physics from the University of Crete, which provided a strong quantitative lens through which to view the world. This led me to an MSc in Brain &amp;amp; Mind Sciences, where I delved into the brain&amp;rsquo;s computational architecture. This period was defined by hands-on research at the Foundation for Research and Technology-Hellas (FORTH), during my lab rotations and earlier my bachelor thesis.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Publications</title>
+      <link>//localhost:1313/publications/</link>
+      <pubDate>Fri, 17 May 2024 10:00:00 +0300</pubDate>
+      <guid>//localhost:1313/publications/</guid>
+      <description>&lt;p&gt;This page lists my peer-reviewed publications, conference presentations, and preprints.&lt;/p&gt;&#xA;&lt;h2 id=&#34;peer-reviewed-papers&#34;&gt;Peer-Reviewed Papers&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Anastasakis, S., et al.&lt;/strong&gt; (Year). &lt;em&gt;Title of Key Paper&lt;/em&gt;. Journal Name.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;(&amp;hellip;add more here)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;conference-presentations&#34;&gt;Conference Presentations&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Computational Modeling of Fear Memory Allocation&amp;hellip;&lt;/strong&gt; (Oct 2012). &lt;em&gt;7th Conference of the Hellenic Society for Computational Biology and Bioinformatics.&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;(&amp;hellip;add more here)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
   </channel>
 </rss>
