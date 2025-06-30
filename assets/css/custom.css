@@ -1,75 +1,112 @@
 /* assets/css/custom.css */
+/* Add these styles to the end of the file */
 
-/* --- Navigation Bar --- */
-.navbar {
-  padding: 1.5rem 0;
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: center; /* Center the navigation items */
-}
+/* ---------------------------------- */
+/* --- CUSTOM HOMEPAGE STYLING --- */
+/* ---------------------------------- */
 
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2rem; /* The space between your nav links */
-}
-
-.navbar a {
-  font-weight: 700;
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-.navbar a:hover {
-  color: var(--accent-color);
+/* A new container to keep content centered and not too wide */
+.container-narrow {
+  max-width: 45rem; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
 /* --- Main Intro Section --- */
-.intro {
+.intro-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 50vh; /* Ensures the content is vertically centered */
+  min-height: 40vh; /* Pushes the links down the page */
 }
 
 .intro-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   color: var(--primary-text-color);
-  font-weight: 700;
+  line-height: 1.2;
 }
 
 .intro-subtitle {
   font-size: 1.2rem;
   color: var(--secondary-text-color);
-  max-width: 35em; /* Keeps the tagline from getting too wide on large screens */
   line-height: 1.6;
+  max-width: 35em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* --- Social Links Icons --- */
+/* --- Links Section --- */
+.links-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between; /* This puts nav on left, social on right */
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to stack on small screens */
+  gap: 1.5rem;
+}
+
+/* --- Navigation Links (About, CV) --- */
+.navbar .nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .nav-links a {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--accent-color);
+}
+
+
+/* --- Social Links (LinkedIn, GitHub) --- */
 .social-links {
   list-style: none;
   padding: 0;
-  margin-top: 2.5rem;
+  margin: 0;
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  gap: 1.75rem;
 }
 
 .social-links a {
-  color: var(--primary-text-color);
-  font-size: 1.5rem; /* Adjust icon size here */
+  color: var(--secondary-text-color);
+  font-size: 1.4rem;
   text-decoration: none;
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
   display: inline-block;
 }
 
 .social-links a:hover {
-  transform: translateY(-4px); /* A subtle "lift" effect on hover */
+  transform: translateY(-3px);
   color: var(--accent-color);
+}
+
+/* --- Responsive Design for small screens --- */
+@media (max-width: 600px) {
+  .links-section {
+    flex-direction: column; /* Stack nav and social links */
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
 }

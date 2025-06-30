@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2024-05-16T12:00:00+03:00
+date: 2025-06-30T12:00:00+03:00
 draft: false
 author: "Stylianos (Stelios) Anastasakis"
 description: "About Stelios Anastasakis, a researcher synthesizing computational neuroscience, software engineering and data science."
