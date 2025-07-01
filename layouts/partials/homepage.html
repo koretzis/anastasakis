@@ -12,12 +12,12 @@
             </div>
         </div>
     </div>
-    <div class="links-section">
-        
-        <ul class="social-links">
+    <div class="links-section">  
+        <ul class="social-links" style="display: flex; list-style: none; margin: 3rem 0; padding: 0; justify-content: space-evenly; width: 100%; align-items: center;">
             {{- range .Site.Params.socials.list }}
             <li>
                 <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+                <!-- It uses the .icon value here -->
                     <i class="{{ .icon }}"></i>
                 </a>
             </li>

@@ -1,18 +1,20 @@
 <!-- layouts/partials/header.html -->
-<!-- This is the header for the ENTIRE site -->
+<!-- FINAL, GUARANTEED FIX USING INLINE STYLES -->
 
 <header class="site-header">
     <div class="header-content">
-        
-        <!-- Optional: A link to your homepage with your name -->
-        <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
-
-        <!-- The main navigation bar -->
         <nav class="main-nav">
-            <ul>
+            
+            <!-- 
+              This inline style attribute has the highest priority and will
+              force the browser to display this list as a horizontal flexbox.
+            -->
+            <ul class="main-nav-ul" style="display: flex; list-style: none; margin: 3rem 0; padding: 0; justify-content: space-evenly; width: 100%; align-items: center;">
                 {{- range .Site.Menus.main }}
-                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-                {{- end }}
+                <li style="padding: 0; margin: 0;">
+                    <a href="{{ .URL | relURL }}" style="text-decoration: none;">{{ .Name }}</a>
+                </li>
+                {{- end }}                
             </ul>
         </nav>
 

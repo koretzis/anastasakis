@@ -12,10 +12,14 @@ a {
     text-decoration: none; /* Removes the underline from all links */
 }
 
-ul {
-    list-style: none; /* Removes bullet points from all lists */
+.prose ul {
+    list-style: none !important;
     margin: 0;
     padding: 0;
+}
+
+.main-nav > ul {
+    list-style: none;
 }
 
 
@@ -154,3 +158,4 @@ ul {
         font-size: 2rem;
     }
 }
+
